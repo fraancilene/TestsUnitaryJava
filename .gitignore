@@ -1,0 +1,82 @@
+Testes Automatizados
+-> automatização
+-> Feedback mais rápido
+-> segurança ao mexer no código
+-> Favorece a melhoria no código (refactoring)
+
+(passar para o Readme)
+Conhecendo JUnit
+* Biblioteca padrão para escrita de testes automatizados java
+* Criado e 1995 por Kent Beck e Erich Gamma
+* Gratuito e open source (http://github.com/junit-team/junit5)
+* Foco em testes de unidade (testes unitários)
+
+Convenção de nomes de classes JUnit:
+o mesmo nome da classe que está sendo testada, mais o sufixo Test
+
+Formas de adicionar Junit no Projeto:
+* com a anotação @Test em cima do método de teste.
+* adicionar como dependencia: maven - no pom.xml
+
+Classe Assert
+Assertiva de igualdade: assertEquals(valor esperado, valor a ser comparado)
+
+Cenários:
+Sempre que for testes de valores sempre temos que testar 3 possibilidades:
+o valor maior, o valor menor e o valor exatamente igual.
+
+TDD - Test driven Development - Testes guiado pelo teste
+Testes antes, código depois
+testes ------> implementação ------>Refatoração
+
+EX:
+Funcionalidade - Reajuste baseado no desempenho anual
+O sistema deve permitir que os funcionarios recebam um reajuste salarial anual baseado em seu
+desempenho, obedecendo às seguintes regras:
+* Se o desempenho foi "A desejar", Reajuste será de apenas 3% do salário;
+* Se o desempenho foi "Bom", reajuste será de 15% do salário;
+* Se o desempenho foi "Ótimo", o reajuste será de 20% do salário.
+
+QUANDO USAR TDD
+O ideal é quando vc vai implementar uma funcionalidade meio complexa.
+Vantagens:
+* Código já sai "testado",
+* Evita testes "viciados" na implementação;
+* Refatoração faz parte do processo
+* Ajuda a manter o foco
+* Temos uma "tendência" em escrever um código mais simples
+
+##############################################################
+.DS_Store
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
