@@ -46,6 +46,16 @@ Vantagens:
 * Ajuda a manter o foco
 * Temos uma "tendência" em escrever um código mais simples
 
+TESTES QUE RETORNAM UMA EXCEPTION
+Assert.assertThrows(qual a classe da exception que estou esperando.class, um lambda com o método a ser chamado
+ao qual o junit vai verificar se durante a chamada do método a exception aconteceu).
+
+No geral há 3 abordagens nos testes:
+1º testes que vc chama um método que devolve um valor - fazendo o assert em cima desse retorno
+2º testes que chamamos um método que não devolve nada - fazemos o assert em cima do objeto que estamos passando
+como parametro
+3º testes de exception, onde simulamos que uma exceção esta acontecendo
+
 ##############################################################
 .DS_Store
 HELP.md

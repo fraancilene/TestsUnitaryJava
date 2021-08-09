@@ -5,18 +5,27 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class BonusServiceTest {
 
+    // testes que retornam exception
     @Test
     public void bonusMaiorQueMil(){
         BonusService service = new BonusService();
-        BigDecimal bonus = service.calcularBonus(new Funcionario("Francilene Silva",
-                LocalDate.now(), new BigDecimal(25000)));
+        // 1º maneira
+        assertThrows(IllegalArgumentException.class,
+                () -> service.calcularBonus(new Funcionario("Francilene Silva", LocalDate.now(), new BigDecimal(25000))));
 
-        assertEquals(new BigDecimal("0.00"), bonus);
-
+//        // 2º maneira - esta abordagem é util quando queremos pegar a mensagem
+//        try {
+//            service.calcularBonus(new Funcionario("Francilene Silva", LocalDate.now(), new BigDecimal(25000)));
+//            fail("Não deu a exception!");
+//        } catch (Exception e){
+//          // se entrar no catch - ok
+//          // se não entrar - falhou
+//            // verigicando a mensagem
+//            assertEquals("Funcionario com salário maior do que R$ 10000 não pode receber bônus", e.getMessage());
     }
 
     @Test
@@ -25,7 +34,7 @@ public class BonusServiceTest {
         BigDecimal bonus = service.calcularBonus(new Funcionario("Francilene Silva",
                 LocalDate.now(), new BigDecimal(2500)));
 
-        assertEquals(new BigDecimal("250.00"), bonus);
+
     }
 
     @Test
