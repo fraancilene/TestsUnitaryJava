@@ -54,8 +54,19 @@ No geral há 3 abordagens nos testes:
 1º testes que vc chama um método que devolve um valor - fazendo o assert em cima desse retorno
 2º testes que chamamos um método que não devolve nada - fazemos o assert em cima do objeto que estamos passando
 como parametro
-3º testes de exception, onde simulamos que uma exceção esta acontecendo
+3º testes de exception, onde simulamos que uma exceção esta acontecendo.
 
+ANOTAÇÕES JUnit
+
+
+obs: métodos privados não se testa.
+
+O QUE TESTAR NA APLICAÇÃO?
+* Não faz sentido testar getters e setters
+* Não faz sentido testar construtor padrão.
+* Você só deve testar classes que tem regras de negócio, validações
+algoritmos, calculos e principalmente coisas que tendem a mudar no futuro.
+* Não devemos testar todas as classes.
 ##############################################################
 .DS_Store
 HELP.md

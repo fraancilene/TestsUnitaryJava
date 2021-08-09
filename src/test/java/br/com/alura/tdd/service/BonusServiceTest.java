@@ -9,6 +9,12 @@ import static org.junit.Assert.*;
 
 public class BonusServiceTest {
 
+    private BonusService service;
+
+    public void inicializa(){
+
+    }
+
     // testes que retornam exception
     @Test
     public void bonusMaiorQueMil(){
